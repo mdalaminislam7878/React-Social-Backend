@@ -21,23 +21,12 @@ app.use(passport.session())
 app.use(
     cors()
 )
-app.head("*", cors(), (req, res) => {
-    console.info("HEAD /simple-cors");
-    res.sendStatus(204);
-  });
 
-// app.use(function(req, res, next) {
-//     res.header("Access-Control-Allow-Origin", '*');
-//     res.header("Access-Control-Allow-Credentials", true);
-//     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-//     res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
-//     next();
-// });
 
-app.get('/', (req, res) => {
+app.get('/', cors(), (req, res) => {
     res.json({user: "hello"});
 })
-app.use('/auth', authRoutes)
+app.use('/auth', cors(), authRoutes)
 
 app.listen(port, err => {
     console.log("Server is running");
