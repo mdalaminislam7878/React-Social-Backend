@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const passport = require('passport');
-const CLIENT_URL = "http://localhost:3000";
+const CLIENT_URL = "https://mdalaminislam7878-social-app.netlify.app/";
 
 //success or failed message show routes
 router.get('/login/success', (req, res) => {
