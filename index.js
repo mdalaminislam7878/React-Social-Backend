@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+app.use(cors())
 const cookieSession = require('cookie-session');
 const passport = require('passport');
-const cors = require('cors');
 const passportSetup = require('./passport');
 const authRoutes = require('./routes/auth');
 
@@ -18,10 +19,7 @@ app.use(cookieSession({
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.use(cors({
-    origin: "https://mdalaminislam787-social.herokuapp.com/auth/login/success/",
-    methods: 'GET, POST, PUT, UPDATE'
-}))
+
 
 app.get('/', (req, res) => {
     res.status(200).send("Hello");
