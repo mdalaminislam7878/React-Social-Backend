@@ -19,7 +19,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(cors({
-    origin: "https://mdalaminislam7878-social-app.netlify.app/",
+    origin: "https://mdalaminislam787-social.herokuapp.com/auth/login/success/",
     methods: 'GET, POST, PUT, UPDATE'
 }))
 
