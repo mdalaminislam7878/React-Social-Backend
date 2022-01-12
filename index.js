@@ -18,11 +18,7 @@ app.use(cookieSession({
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.use(
-    cors({
-        'Access-Control-Allow-Origin': 'https://mdalaminislam7878-social-app.netlify.app/'
-    })
-)
+app.use(cors())
 
 app.get('/', (req, res) => {
     res.status(200).send("Hello");
