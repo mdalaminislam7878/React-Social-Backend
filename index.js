@@ -19,14 +19,13 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(
-    cors()
+    cors({
+        'Access-Control-Allow-Origin': 'https://mdalaminislam7878-social-app.netlify.app/'
+    })
 )
 
 
-app.get('/', cors(), (req, res) => {
-    res.json({user: "hello"});
-})
-app.use('/auth', cors(), authRoutes)
+app.use('/auth', authRoutes)
 
 app.listen(port, err => {
     console.log("Server is running");
