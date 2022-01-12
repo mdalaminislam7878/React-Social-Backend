@@ -25,7 +25,9 @@ app.use(
         credentials: true
     })
 )
-
+app.get('/', (req, res) => {
+    res.send("hello ");
+})
 app.use('/auth', authRoutes)
 
 app.listen(port, err => {
