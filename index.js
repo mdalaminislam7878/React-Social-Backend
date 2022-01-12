@@ -22,7 +22,8 @@ app.use(
     cors({
         origin: "https://mdalaminislam787-social.herokuapp.com/auth/login/success",
         methods: "GET, POST, PUT, DELETE",
-        credentials: true
+        credentials: true,
+        preflightContinue: false
     })
 )
 app.get('/', (req, res) => {
