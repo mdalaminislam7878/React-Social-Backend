@@ -18,7 +18,10 @@ app.use(cookieSession({
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.use(cors())
+app.use(cors({
+    origin: "https://mdalaminislam7878-social-app.netlify.app/",
+    methods: 'GET, POST, PUT, UPDATE'
+}))
 
 app.get('/', (req, res) => {
     res.status(200).send("Hello");
