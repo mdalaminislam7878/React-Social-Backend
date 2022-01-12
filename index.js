@@ -20,9 +20,9 @@ app.use(passport.session())
 
 app.use(
     cors({
-        origin: "*",
+        origin: "https://mdalaminislam787-social.herokuapp.com/auth/login/success",
         methods: "GET, POST, PUT, DELETE",
-        credentials: false
+        credentials: true
     })
 )
 app.get('/', (req, res) => {
