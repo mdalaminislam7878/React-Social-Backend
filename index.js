@@ -26,7 +26,7 @@ app.use(
     })
 )
 app.get('/', (req, res) => {
-    res.send("hello ");
+    res.json({user: "hello"});
 })
 app.use('/auth', authRoutes)
 
