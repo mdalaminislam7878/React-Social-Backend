@@ -20,7 +20,7 @@ app.use(passport.session())
 
 app.use(
     cors({
-        origin: "https://mdalaminislam7878-social-app.netlify.app/",
+        origin: "*",
         methods: "GET, POST, PUT, DELETE",
         credentials: true
     })
