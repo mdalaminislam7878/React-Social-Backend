@@ -24,7 +24,9 @@ app.use(
     })
 )
 
-
+app.get('/', (req, res) => {
+    res.status(200).send("Hello");
+})
 app.use('/auth', authRoutes)
 
 app.listen(port, err => {
