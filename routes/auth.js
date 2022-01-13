@@ -5,7 +5,7 @@ const CLIENT_URL = "https://mdalaminislam7878-social-app.netlify.app";
 //success or failed message show routes
 router.get('/login/success', (req, res) => {
     if(req.user) {
-        res.status(200).json({
+        res.status(204).json({
             success: true,
             message: "Success",
             user: req.user
