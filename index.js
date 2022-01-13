@@ -28,7 +28,7 @@ app.use(passport.session())
 
 
 app.get('/', (req, res) => {
-    res.status(200).send("Hello");
+    res.status(204).json({user: true});
 })
 app.use('/auth', authRoutes)
 
