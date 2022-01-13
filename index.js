@@ -1,11 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-app.use(cors({
-    origin: 'https://mdalaminislam7878-social-app.netlify.app/',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
-  ))
+app.use(cors())
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const passportSetup = require('./passport');
