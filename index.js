@@ -2,10 +2,8 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 app.use(cors({
-    "origin": "*",
-    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-    "preflightContinue": false,
-    "optionsSuccessStatus": 204
+    origin: 'https://mdalaminislam7878-social-app.netlify.app/',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
   ))
 const cookieSession = require('cookie-session');
