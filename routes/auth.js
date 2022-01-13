@@ -3,7 +3,7 @@ const passport = require('passport');
 const CLIENT_URL = "https://mdalaminislam7878-social-app.netlify.app";
 
 //success or failed message show routes
-router.get('/login/success', (req, res) => {
+router.get('/login/success', async (req, res) => {
     if(req.user) {
         res.status(200).json({
             success: true,
